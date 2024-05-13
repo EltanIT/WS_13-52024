@@ -80,6 +80,10 @@ dependencies {
     implementation("io.github.jan-tennert.supabase:gotrue-kt:2.2.3")
     implementation("io.github.jan-tennert.supabase:compose-auth:2.2.3")
 
+    //ktor
+    implementation("io.ktor:ktor-client-core:2.3.9")
+    implementation("io.ktor:ktor-client-cio:2.3.9")
+
     //room
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.runtime)

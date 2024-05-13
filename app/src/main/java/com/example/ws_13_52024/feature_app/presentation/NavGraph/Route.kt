@@ -8,8 +8,15 @@ sealed class Route(val route: String) {
 
 
     data object SignIn: Route("SignIn")
+    data object SignUp: Route("SignUp")
+    data object ForgotPassword: Route("ForgotPassword")
+    data object Verification: Route("Verification")
+
+
+    data object Home: Route("Home")
 
 
     data object AuthGraph: Route("AuthGraph")
+    data object AppGraph: Route("AppGraph")
 
 }

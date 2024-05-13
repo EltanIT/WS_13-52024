@@ -12,6 +12,13 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 
+val BlueColor = Color(0xFF48B2E7)
+val DarkGrayColor = Color(0xFF6A6A6A)
+val GrayColor = Color(0xFF707B81)
+val LightGrayColor = Color(0xFFF7F7F9)
+val RedColor = Color(0xFFF87265)
+
+
 
 val BackgroundColor = Brush.verticalGradient(
     listOf(

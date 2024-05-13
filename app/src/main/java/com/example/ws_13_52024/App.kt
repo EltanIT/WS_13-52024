@@ -1,6 +1,7 @@
 package com.example.ws_13_52024
 
 import android.app.Application
+import com.example.ws_13_52024.di.authModule
 import com.example.ws_13_52024.di.queueModule
 import com.example.ws_13_52024.di.viewModelsModule
 import org.koin.android.ext.koin.androidContext
@@ -16,7 +17,7 @@ class App: Application() {
         startKoin {
             androidContext(this@App)
             androidLogger(Level.DEBUG)
-            modules(listOf(queueModule, viewModelsModule))
+            modules(listOf(queueModule, viewModelsModule, authModule))
         }
     }
 }

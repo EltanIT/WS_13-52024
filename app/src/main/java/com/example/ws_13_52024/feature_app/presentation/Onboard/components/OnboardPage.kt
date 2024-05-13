@@ -17,12 +17,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ws_13_52024.R
 import com.example.ws_13_52024.feature_app.presentation.Onboard.OnboardItem
+import com.example.ws_13_52024.feature_app.presentation.ui.theme.MyFontFamily
 
 
 @Composable
@@ -69,6 +71,7 @@ fun OnboardPage(
             lineHeight = 44.2.sp,
             fontWeight = FontWeight(700),
             textAlign = TextAlign.Center,
+            fontFamily = FontFamily(MyFontFamily),
             color = Color(0xffECECEC)
         ))
         Spacer(modifier = Modifier.height(12.dp))
@@ -77,6 +80,7 @@ fun OnboardPage(
             lineHeight = 24.sp,
             fontWeight = FontWeight(400),
             textAlign = TextAlign.Center,
+            fontFamily = FontFamily(MyFontFamily),
             color = Color(0xffD8D8D8)
         ))
     }

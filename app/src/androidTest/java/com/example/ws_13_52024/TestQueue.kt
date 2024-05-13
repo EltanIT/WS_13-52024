@@ -24,7 +24,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 
-//RED
+//REFACTOR
 @RunWith(AndroidJUnit4::class)
 class TestQueue {
 
@@ -73,6 +73,7 @@ class TestQueue {
         rule.onNodeWithText("Начать").performClick()
 
         rule.onNodeWithText("title2").assertExists()
+
 
     }
 

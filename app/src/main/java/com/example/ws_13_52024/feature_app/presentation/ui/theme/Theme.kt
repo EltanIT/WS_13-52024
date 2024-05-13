@@ -1,4 +1,4 @@
-package com.example.ws_13_52024.ui.theme
+package com.example.ws_13_52024.feature_app.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

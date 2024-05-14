@@ -56,7 +56,12 @@ fun HomeScreen(
             .background(Color(0xffF7F7F9))
             .fillMaxSize()
     ) {
-        HomeTopBar(onDrawerOpen = {}, cardClick = {}, cardIsEmpty = state.cardIsEmpty, modifier = Modifier.padding(horizontal = 20.dp))
+        HomeTopBar(
+            onDrawerOpen = {},
+            cardClick = { navController.navigate(Route.Card.route)},
+            cardIsEmpty = state.cardIsEmpty,
+            modifier = Modifier.padding(horizontal = 20.dp)
+        )
         Spacer(modifier = Modifier.height(19.dp))
 
         Row(
@@ -144,19 +149,26 @@ fun HomeScreen(
                 .padding(horizontal = 21.dp)
                 .fillMaxWidth()
         ) {
-            repeat(state.populars.size){
+            repeat(state.populars.size){ index ->
+                val inCard = state.myCard.find { it.product_id.equals(state.populars[index].id) } != null
                 CustomProductItemView(
-                    productData = state.populars[it],
-                    inCard = true,
+                    productData = state.populars[index],
+                    inCard = inCard,
                     isFavorite = true,
                     modifier = Modifier.weight(1f),
-                    onCardClick = {  },
+                    onCardClick = {
+                        if (!inCard){
+                            viewModel.onEvent(HomeEvent.AddInCard(state.populars[index].id))
+                        }else{
+                            viewModel.onEvent(HomeEvent.DeleteFromCard(state.populars[index].id))
+                        }
+                                  },
                     onFavoriteClick = {  }) {
                     navController.navigate(
-                        Route.ProductDetails.route.replace("{id}", state.populars[it].id)
+                        Route.ProductDetails.route.replace("{id}", state.populars[index].id)
                     )
                 }
-                if (it==0){
+                if (index==0){
                     Spacer(modifier = Modifier.width(19.dp))
                 }
 

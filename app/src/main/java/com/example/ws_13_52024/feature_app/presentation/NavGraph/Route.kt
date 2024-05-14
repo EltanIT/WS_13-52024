@@ -19,6 +19,7 @@ sealed class Route(val route: String) {
     data object Listing: Route("Listing?category={category}")
     data object Card: Route("Card")
     data object Favorite: Route("Favorite")
+    data object CheckOut: Route("CheckOut?sum={sum}")
 
 
     data object MainScreen: Route("MainScreen")

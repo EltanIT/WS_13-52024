@@ -1,5 +1,8 @@
 package com.example.ws_13_52024.di
 
+import com.example.ws_13_52024.feature_app.presentation.Card.CardViewModel
+import com.example.ws_13_52024.feature_app.presentation.CheckOut.CheckOutViewModel
+import com.example.ws_13_52024.feature_app.presentation.Favorite.FavoriteViewModel
 import com.example.ws_13_52024.feature_app.presentation.ForgotPass.ForgotPassViewModel
 import com.example.ws_13_52024.feature_app.presentation.Home.HomeViewModel
 import com.example.ws_13_52024.feature_app.presentation.Listing.ListingViewModel
@@ -45,7 +48,10 @@ val viewModelsModule = module {
     viewModel<HomeViewModel>{
         HomeViewModel(
             get(),
-            get()
+            get(),
+            get(),
+            get(),
+            get(),
         )
     }
 
@@ -55,5 +61,17 @@ val viewModelsModule = module {
 
     viewModel<ListingViewModel>{
         ListingViewModel(get(), get())
+    }
+
+    viewModel<CardViewModel>{
+        CardViewModel(get(), get(), get())
+    }
+
+    viewModel<FavoriteViewModel>{
+        FavoriteViewModel(get())
+    }
+
+    viewModel<CheckOutViewModel>{
+        CheckOutViewModel()
     }
 }

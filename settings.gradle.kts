@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "WS_13-52024"
 include(":app")
- 
+include(":app:feature")

@@ -4,14 +4,12 @@ import kotlinx.serialization.Serializable
 
 
 @Serializable
-data class ProductData(
+data class ProfileData(
     val id: String,
+    val user_id: String,
     val name: String,
-    val category: String,
-    val shop: String,
-    val price: Float,
-    val image: String,
-    val description: String,
-    val model: String? = null,
+    val card: String,
+    val email: String,
+    val phone: String,
     val created_at: String
 )

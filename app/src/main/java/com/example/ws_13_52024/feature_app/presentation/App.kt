@@ -2,6 +2,7 @@ package com.example.ws_13_52024.feature_app.presentation
 
 import android.app.Application
 import com.example.ws_13_52024.di.authModule
+import com.example.ws_13_52024.di.cardModule
 import com.example.ws_13_52024.di.categoryModule
 import com.example.ws_13_52024.di.productModule
 import com.example.ws_13_52024.di.queueModule
@@ -19,7 +20,7 @@ class App: Application() {
         startKoin {
             androidContext(applicationContext)
             androidLogger(Level.DEBUG)
-            modules(listOf(queueModule, viewModelsModule, authModule, productModule, categoryModule))
+            modules(listOf(queueModule, viewModelsModule, authModule, productModule, categoryModule, cardModule))
         }
     }
 }

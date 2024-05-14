@@ -162,7 +162,7 @@ fun ProductDetailsScreen(
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        Text(text = state.product?.price ?: "", style = TextStyle(
+        Text(text =  "₽${state.product?.price}", style = TextStyle(
             fontSize = 24.sp,
             lineHeight = 36.sp,
             fontWeight = FontWeight(600),

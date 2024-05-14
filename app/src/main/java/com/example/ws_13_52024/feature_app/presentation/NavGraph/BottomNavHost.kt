@@ -6,6 +6,7 @@ import androidx.compose.ui.platform.LocalView
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
+import com.example.ws_13_52024.feature_app.presentation.Favorite.FavoriteScreen
 import com.example.ws_13_52024.feature_app.presentation.Home.HomeScreen
 
 
@@ -30,7 +31,7 @@ fun BottomNavHost(
         }
 
         composable(Route.Favorite.route){
-            HomeScreen(navController = mainNavController)
+            FavoriteScreen(navController = mainNavController)
         }
     }
 }

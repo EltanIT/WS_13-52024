@@ -4,14 +4,13 @@ import kotlinx.serialization.Serializable
 
 
 @Serializable
-data class ProductData(
+data class ProductCardData(
     val id: String,
+    val product_id: String,
     val name: String,
-    val category: String,
-    val shop: String,
     val price: Float,
     val image: String,
-    val description: String,
-    val model: String? = null,
-    val created_at: String
+    val created_at: String,
+
+    val count: Int = 1
 )

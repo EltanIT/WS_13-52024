@@ -20,10 +20,6 @@ class AuthRepositoryImpl(): AuthRepository {
             password = pass
         }
 
-        client.postgrest["profile"].insert(mapOf("name" to name)){
-            filter {
-                eq("user_id", client.auth.currentUserOrNull()?.id?:"")
-            }
-        }
+        client.postgrest["profile"].insert(mapOf("name" to name))
     }
 }

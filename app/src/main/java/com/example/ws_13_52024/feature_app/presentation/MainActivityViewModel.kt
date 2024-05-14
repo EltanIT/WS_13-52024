@@ -21,6 +21,7 @@ class MainActivityViewModel(
 
 
 
+
     fun checkStartDestination(){
         viewModelScope.launch(Dispatchers.IO) {
             val queue = useCase.checkIsQueue()

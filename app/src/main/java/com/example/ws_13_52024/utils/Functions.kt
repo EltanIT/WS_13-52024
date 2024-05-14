@@ -1,8 +1,9 @@
 package com.example.ws_13_52024.utils
 
-fun validIsEmail(email: String): Boolean{
-    val emailPattern = Regex("[a-z0-9]+@[a-z0-9]+\\.[a-z]{2,}")
-    return emailPattern.matches(email)
+import android.util.Patterns
+
+fun emailIsValid(email: String): Boolean{
+    return Patterns.EMAIL_ADDRESS.matcher(email).matches()
 }
 
 

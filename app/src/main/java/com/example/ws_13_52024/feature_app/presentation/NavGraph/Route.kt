@@ -14,6 +14,14 @@ sealed class Route(val route: String) {
 
 
     data object Home: Route("Home")
+    data object Search: Route("Search")
+    data object ProductDetails: Route("ItemDetails?id={id}")
+    data object Listing: Route("Listing?category={category}")
+    data object Card: Route("Card")
+    data object Favorite: Route("Favorite")
+
+
+    data object MainScreen: Route("MainScreen")
 
 
     data object AuthGraph: Route("AuthGraph")

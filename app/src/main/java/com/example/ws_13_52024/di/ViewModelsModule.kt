@@ -1,8 +1,12 @@
 package com.example.ws_13_52024.di
 
 import com.example.ws_13_52024.feature_app.presentation.ForgotPass.ForgotPassViewModel
+import com.example.ws_13_52024.feature_app.presentation.Home.HomeViewModel
+import com.example.ws_13_52024.feature_app.presentation.Listing.ListingViewModel
 import com.example.ws_13_52024.feature_app.presentation.MainActivityViewModel
+import com.example.ws_13_52024.feature_app.presentation.MainScreen.MainScreenViewModel
 import com.example.ws_13_52024.feature_app.presentation.Onboard.OnboardViewModel
+import com.example.ws_13_52024.feature_app.presentation.ProductDetails.ProductDetailsViewModel
 import com.example.ws_13_52024.feature_app.presentation.SignIn.SignInViewModel
 import com.example.ws_13_52024.feature_app.presentation.SignUp.SignUpViewModel
 import com.example.ws_13_52024.feature_app.presentation.VerificationPass.VerificationPassViewModel
@@ -32,5 +36,24 @@ val viewModelsModule = module {
 
     viewModel<VerificationPassViewModel>{
         VerificationPassViewModel()
+    }
+
+    viewModel<MainScreenViewModel>{
+        MainScreenViewModel()
+    }
+
+    viewModel<HomeViewModel>{
+        HomeViewModel(
+            get(),
+            get()
+        )
+    }
+
+    viewModel<ProductDetailsViewModel>{
+        ProductDetailsViewModel(get())
+    }
+
+    viewModel<ListingViewModel>{
+        ListingViewModel(get(), get())
     }
 }

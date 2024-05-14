@@ -5,6 +5,7 @@ import com.example.ws_13_52024.feature_app.domain.manger.QueueManger
 import com.example.ws_13_52024.feature_app.presentation.Onboard.OnboardItem
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+
 import java.util.LinkedList
 
 class QueueMangerImpl(

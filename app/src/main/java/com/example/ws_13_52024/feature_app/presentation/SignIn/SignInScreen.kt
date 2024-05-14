@@ -29,7 +29,6 @@ import com.example.ws_13_52024.core.presentation.CustomBackImage
 import com.example.ws_13_52024.core.presentation.CustomPrimaryButton
 import com.example.ws_13_52024.core.presentation.ExceptionAlertDialog
 import com.example.ws_13_52024.feature_app.presentation.NavGraph.Route
-import com.example.ws_13_52024.feature_app.presentation.ui.theme.BackgroundColor
 import com.example.ws_13_52024.feature_app.presentation.ui.theme.DarkGrayColor
 import com.example.ws_13_52024.feature_app.presentation.ui.theme.GrayColor
 import com.example.ws_13_52024.feature_app.presentation.ui.theme.MyFontFamily
@@ -50,9 +49,10 @@ fun SignInScreen(
         }
     }
 
+
     LaunchedEffect(key1 = !state.isComplete) {
         if (state.isComplete){
-            navController.navigate(Route.Home.route)
+            navController.navigate(Route.MainScreen.route)
         }
     }
 

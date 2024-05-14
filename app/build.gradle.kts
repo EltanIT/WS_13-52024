@@ -4,6 +4,7 @@ plugins {
 
 //    id("com.google.devtools.ksp")
     id("kotlin-kapt")
+    alias(libs.plugins.serialization)
 
 }
 
@@ -80,9 +81,14 @@ dependencies {
     implementation("io.github.jan-tennert.supabase:gotrue-kt:2.2.3")
     implementation("io.github.jan-tennert.supabase:compose-auth:2.2.3")
 
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+
     //ktor
     implementation("io.ktor:ktor-client-core:2.3.9")
     implementation("io.ktor:ktor-client-cio:2.3.9")
+
+    //gson
+    implementation("com.google.code.gson:gson:2.10.1")
 
     //room
     implementation(libs.androidx.room.ktx)
@@ -94,15 +100,13 @@ dependencies {
     implementation(libs.io.koin.core)
     implementation(libs.io.koin.android)
 
-    //retrofit
-    implementation(libs.squareup.converter.gson)
-    implementation(libs.squareup.retrofit2)
-
     //navigation
     implementation(libs.androidx.navigation)
 
     //coil
     implementation(libs.io.coil.compose)
+
+
 
 
 }
